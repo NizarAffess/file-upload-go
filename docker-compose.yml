@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  file-upload:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/go/src/go-file-upload
+    ports:
+      - "9021:9020"
+    container_name: go-file-upload-cont
